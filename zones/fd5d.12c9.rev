@@ -1,0 +1,17 @@
+;$ORIGIN 1.0.0.0.1.0.2.2.9.c.2.1.d.5.d.f.ip6.arpa.
+$TTL 86400      ; 1 day
+@       IN      SOA     server.dns.edu.br. root.dns.edu.br. (
+                                2019103101 ; serial
+                                10800      ; refresh (3 hours)
+                                3600       ; retry (1 hour)                        
+                                2419200    ; expire (4 weeks)
+                                300        ; minimum (5 minutes)     
+                                )
+
+@	IN	NS	server.
+
+;4.5.2.0.0.0.0.0.0.0.0.0.0.0.0.0	IN	PTR	server.dns.edu.br.
+;c.f.e.9.3.6.8.d.b.0.0.a.1.9.1.5	IN	PTR	cliente.dns.edu.br.
+
+4.5.2.0.0.0.0.0.0.0.0.0.0.0.0.0.1.0.0.0.1.0.2.2.9.c.2.1.d.5.d.f.ip6.arpa.   IN PTR server.dns.edu.br.
+c.f.e.9.3.6.8.d.b.0.0.a.1.9.1.5.1.0.0.0.1.0.2.2.9.c.2.1.d.5.d.f.ip6.arpa.   IN PTR cliente.dns.edu.br.
