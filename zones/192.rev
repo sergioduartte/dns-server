@@ -1,0 +1,18 @@
+;
+; BIND reverse data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	server.dns.edu.br. root.dns.edu.br. (
+			 2018103101	; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	server.
+
+130	IN	PTR	server.dns.edu.br.
+137	IN	PTR	teste.dns.edu.br.
+139	IN	PTR	cliente.dns.edu.br.
+
+;4.5.2.0.0.0.0.0.0.0.0.0.0.0.0.0.1.0.0.0.1.0.2.2.9.c.2.1.d.5.d.f.ip6.arpa   IN PTR server.dns.edu.br.

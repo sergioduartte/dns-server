@@ -1,0 +1,37 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	server.dns.edu.br. root.dns.edu.br. (
+			 2018103101	; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+
+dns.edu.br.	IN	NS	server.dns.edu.br.
+dns.edu.br.	IN	A	192.168.26.130
+		IN	AAAA	fd5d:12c9:2201:1::254
+
+;-----------------------------------------------------------------
+
+server		IN	A	192.168.26.130
+server		IN	AAAA	fd5d:12c9:2201:1::254
+
+cliente		IN	A	192.168.26.139
+		IN	AAAA	fd5d:12c9:2201:1:5191:a00b:d863:9efc
+teste		IN	A	192.168.26.137
+
+dns		IN	AAAA	2001:db8:1ab:16::3
+		IN	A	192.168.26.136
+
+; ----------------    Rede 10.30.0 ----------------------------
+
+pc-cliente	IN	A	10.30.0.121
+
+; -----------------   CNAMES   ---------------------------------
+
+cliente-pc	IN	CNAME	cliente
+
+
