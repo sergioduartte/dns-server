@@ -4,14 +4,16 @@ Este repositório contém os arquivos **básicos** necessários para a configura
  
 ## Getting started
 
-#### Instalando o bind9
+#### Instalando o bind9 em Sistemas Debian-based
+
+```# apt-get update```
 ```# apt-get install bind9 ```
 
-Todos os arquivos de configuração se encontram no diretório `bind `
+Todos os arquivos de configuração se encontram no diretório `/etc/bind `
 
 ```# cd /etc/bind/ ```
 
-Neste repositório, o arquivo `named.conf.local` é utilizado para declarar as zonas direta e reversa.
+Neste repositório, o arquivo `named.conf.local` é utilizado para declarar as zonas direta e reversa. Usar editor de preferencia (nesse exemplo usamos o *vim*).
 
 ```# vim named.conf.local```
 
@@ -139,7 +141,7 @@ Caso o serviço esteja inativo, tente o seguinte comando:
 
 `# service bind9 start` 
 
-Ou utilizando o `systemctl`:
+Ou utilizando o `systemctl` para sistemas com o systemd:
 
 `# systemctl start bind9 ` 
 
