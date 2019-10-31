@@ -6,8 +6,7 @@ Este repositório contém os arquivos **básicos** necessários para a configura
 
 #### Instalando o bind9 em Sistemas Debian-based
 
-```# apt-get update```
-```# apt-get install bind9 ```
+```# apt-get update ; apt-get install bind9 ```
 
 Todos os arquivos de configuração se encontram no diretório `/etc/bind `
 
