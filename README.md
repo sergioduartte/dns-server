@@ -149,4 +149,12 @@ Ou utilizando o `systemctl` para sistemas com o systemd:
 `# systemctl restart bind9 ` 
 
 
+#### Instalação via Ansible
+
+Para instalar o ansible execute o script shell que se encontra no sub-diretório ./ansible/ansible-ubuntu-simple-install.sh
+
+Após a instalação é necessário adicionar uma chave pública para uso do playbook (Via ssh-copy-id ou editando o arquivo authorized_keys dos hosts a serem afetados).
+
+Por fim executar o comando:
+`# ansible-playbook ./ansible/main-playbook.yml -i ./ansible/hosts --become-user root `
 
