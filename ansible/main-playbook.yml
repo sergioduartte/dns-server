@@ -1,0 +1,20 @@
+- hosts: dns-server 
+  user: root
+  gather_facts: False
+  pre_tasks:
+    - name: "Install python 2 when not installed"
+      raw: "test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)"
+      changed_when: false
+
+    - name: "Gather facts"
+      setup:
+  tasks:
+    - name: "echo command"
+      command: /bin/echo hello world
+
+    - name: update repo
+      shell: "apt update -y"
+      ignore_errors: true
+
+    - name: install bind9
+      apt: name=bind9 update_cache=yes state=latest
