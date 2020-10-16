@@ -3,15 +3,16 @@
 ;
 $TTL	604800
 @	IN	SOA	server.dns.edu.br. root.dns.edu.br. (
-			 2019103101	; Serial
+			 2020101601	; Serial
 			 604800		; Refresh
 			  86400		; Retry
 			2419200		; Expire
 			 604800 )	; Negative Cache TTL
 ;
 
-dns.edu.br.	IN	NS	server.dns.edu.br.
-dns.edu.br.	IN	A	192.168.26.130
+		IN	MX	mail.dns.edu.br.
+		IN	NS	server.dns.edu.br.
+		IN	A	192.168.26.130
 		IN	AAAA	fd5d:12c9:2201:1::254
 
 ;-----------------------------------------------------------------
@@ -35,3 +36,6 @@ pc-cliente	IN	A	10.30.0.121
 cliente-pc	IN	CNAME	cliente
 
 
+; TXT
+
+dns.edu.br	IN	TXT	"v=spf1 ipv4:192.168.26.130 a:server.dns.edu.br ~all"
